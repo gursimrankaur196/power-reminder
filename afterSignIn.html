@@ -1,0 +1,117 @@
+<html>
+<head>
+	<title>Signed In</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+	<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+	<!-- Bootstrap Date-Picker Plugin -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	 <script src="https://use.fontawesome.com/a95719296b.js"></script>
+	 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Lobster" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+</head>
+<body>
+
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a>
+					<a class="navbar-brand" href="#"> Power Reminder</a>
+				</div>
+				<ul class="nav navbar-nav">
+        			<li class="active"><a href="#">Home</a></li>
+        		</ul>
+				<ul class="nav navbar-nav navbar-right">
+        			<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Signed In</a></li>
+      			</ul>
+      			</div>
+		</nav>
+
+<div class="main">
+	<div class="content">
+		<h1>Power Reminder</h1>
+		<h3>Hassle Free Assignments</h3>
+		<hr>
+		<button class="btn btn-default btn-lg slide"><i class="fa fa-paw" aria-hidden="true"></i> Get Started!</button>
+
+	</div>
+			<div class="input" style="font-family:Concert One, cursive">
+			<p class="label">Event Description</p>
+			<textarea class="form-control" rows="3" style="margin:20px"></textarea>
+			<div class="container-fluid">
+  				<div class="row">
+   					<div class="col-md-6 col-sm-6 col-xs-12">
+    				<!-- Form code begins -->
+    					<form method="post">
+     					<div class="form-group"> <!-- Date input -->
+        					<p class="label">Date</p>
+        					<input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" style="width:200px; margin: 20px">
+      					</div>
+     					</form>
+     					<!-- Form code ends --> 
+					</div>
+  				</div>    
+ 			</div>
+ 			<p class="label">Time</p>
+ 			<input type="time" style="margin:20px">
+			<button class="btn btn-info btn-lg" name="submit" type="submit">Submit</button>
+		</div>
+		<script>
+    		$(document).ready(function(){
+		    var date_input=$('input[name="date"]'); //our date input has the name "date"
+		    var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+		    var options={
+		        format: 'mm/dd/yyyy',
+		        container: container,
+		        todayHighlight: true,
+		        autoclose: true,
+		    };
+		      date_input.datepicker(options);
+		    })
+		    $(".slide").on("click", function(){
+				$("div.input").slideDown(1000);
+			});
+		</script>
+		
+		</div>
+
+	<div class="table">
+			<h2>Events</h2>
+				<table class="table table-hover table-striped">
+  			<thead>
+  				<th>Serial No</th>
+  				<th>Description</th>
+  				<th>Date</th>
+  				<th>Time</th>
+  			</thead>
+  			<tbody>
+  				<td></td>
+  				<td></td>
+  				<td></td>
+  				<td></td>
+  			</tbody>	
+		</table>
+
+	</div>
+
+</body>
+</html>
